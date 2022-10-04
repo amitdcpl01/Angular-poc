@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-poc';
+
+  onLogoClicked(){
+    alert('Hello world');
+  }
+
+  onKeyUp(newTitle:string){
+      this.title = newTitle;
+  }
 }
