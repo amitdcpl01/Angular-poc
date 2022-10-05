@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +8,16 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular-POC';
+
+loginForm = new FormGroup({
+  user: new FormControl('', [Validators.required]),
+  password: new FormControl(''),
+})
+
+get user(){
+  return this.loginForm.get('user');
+}
+
   displayVal: string = '';
   show= true;
   color = "green";
