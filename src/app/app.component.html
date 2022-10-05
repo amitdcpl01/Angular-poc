@@ -35,9 +35,9 @@
   <input type="text" #box5 placeholder="Enter Name" (keyup)="getVal(box5.value)" name="username"/>
 
  <p>Box value is: {{displayVal}}</p> -->
-<h1>{{title}}</h1>
+<h3>{{title}}</h3>
  <br /><br />
-<h1 *ngIf="show; then ifBlock else elseBlock">
+<!-- <h1 *ngIf="show; then ifBlock else elseBlock">
   code step by step
 </h1>
 <br /><br />
@@ -47,10 +47,55 @@
 
 <ng-template #elseBlock>
   <h1>Else condition</h1>
+</ng-template> -->
+
+<!-- <ng-template [ngIf]="color==='red'">
+  <h1>Red color</h1>
 </ng-template>
+
+<ng-template [ngIf]="color==='green'">
+  <h1>Green color</h1>
+</ng-template> -->
+
+<!-- <div [ngSwitch]="color">
+  <h1 *ngSwitchCase="'red'">Red color</h1>
+  <h1 *ngSwitchCase="'green'">Green color</h1>
+  <h1 *ngSwitchDefault>Unknown color</h1>
+</div> -->
+
+<!-- <h3 *ngFor="let item of users">{{item}}</h3>
+<h3 *ngFor="let item of userDetails">{{item.name}}, {{item.email}}</h3> -->
+ <!-- <ul *ngFor="let user of users">
+  <li>{{user.name}}</li>
+  <li>{{user.email}}</li>
+  <ul *ngFor="let account of user.accounts">
+    {{account}}
+  </ul>
+ </ul> -->
+
+
+ <!-- <h1 [style.color]="color">{{title}}</h1> -->
+
+ <!-- <app-header></app-header> -->
+
+
+<!-- <form #basicForm="ngForm" (submit)="getFormData(basicForm.value)">
+  <input type="text" ngModel name="user" placeholder="Enter name"/>
+  <br /><br />
+  <input type="text" ngModel name="email" placeholder="Enter email"/>
+  <br /><br />
+  <input type="text" ngModel name="password" placeholder="Enter password"/>
+  <br /><br />
+  <button>Register</button>
+</form>
+
+<ul>
+  <li>{{userData.user}}</li>
+  <li>{{userData.email}}</li>
+</ul> -->
 
 
 </div>
 
 
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
