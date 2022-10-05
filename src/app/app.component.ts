@@ -18,7 +18,6 @@ export class AppComponent {
     { name:'sony', email:'anil@text.com', phone:'1111'},
     { name:'lucy', email:'anil@text.com', phone:'1111'}
   ];
-
   users= [
     { name:'Anil', email:'anil@text.com', phone:'1111', accounts: ['yahoo', 'facebook']},
     { name:'sumit', email:'anil@text.com', phone:'1111', accounts: ['yahoo', 'facebook']},

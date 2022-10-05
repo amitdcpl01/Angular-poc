@@ -101,8 +101,13 @@
   <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
 </ul> -->
 
-<app-child [item]="data" [item2]="data"></app-child>
-<button (click)="updateData()">Update child</button>
+<!-- <app-child [item]="data" [item2]="data"></app-child>
+<button (click)="updateData()">Update child</button> -->
+
+
+<ul *ngFor="let user of userDetails">
+  <app-user-list [item]="user"></app-user-list>
+</ul>
 </div>
 
 
