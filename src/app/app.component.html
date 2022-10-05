@@ -12,7 +12,7 @@
 <!-- <h2>{{getVal()}}</h2>
 <h3></h3>
   <app-course-card></app-course-card> -->
-  <h1>Hello world</h1>
+  <!-- <h1>Hello world</h1>
   <app-header></app-header>
   <app-user-list></app-user-list>
   <app-sign-in></app-sign-in>
@@ -30,6 +30,26 @@
   <h1 (mouseover)="getData('send from mouseover')">Code by Amit</h1>
   <br /><br />
   <h1 (mouseleave)="getData('send from mouseleave')">Code by amit kumar</h1>
+
+  <br /><br />
+  <input type="text" #box5 placeholder="Enter Name" (keyup)="getVal(box5.value)" name="username"/>
+
+ <p>Box value is: {{displayVal}}</p> -->
+<h1>{{title}}</h1>
+ <br /><br />
+<h1 *ngIf="show; then ifBlock else elseBlock">
+  code step by step
+</h1>
+<br /><br />
+<ng-template #ifBlock>
+  <h1>If condition</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h1>Else condition</h1>
+</ng-template>
+
+
 </div>
 
 

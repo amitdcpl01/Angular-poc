@@ -7,13 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-poc';
+  displayVal: string = '';
+  show= true;
 
   onLogoClicked(){
     alert('Hello world');
   }
 
-  getVal(){
-    return "hello Amit";
+  getVal(val: string){
+    console.log(val);
+    this.displayVal = val;
   }
 
   getName(name: string | Number){
