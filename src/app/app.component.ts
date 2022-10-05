@@ -12,7 +12,19 @@ export class AppComponent {
     alert('Hello world');
   }
 
+  getVal(){
+    return "hello Amit";
+  }
+
+  getName(name: string | Number){
+    alert(name)
+  }
+
   onKeyUp(newTitle:string){
       this.title = newTitle;
+  }
+
+  getData(val: string){
+    console.log(val);
   }
 }

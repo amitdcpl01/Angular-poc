@@ -9,8 +9,27 @@
      [value]="title" #titleInput>
     <input type="text" [value]="'title'">
   </div> -->
+<!-- <h2>{{getVal()}}</h2>
+<h3></h3>
+  <app-course-card></app-course-card> -->
+  <h1>Hello world</h1>
+  <app-header></app-header>
+  <app-user-list></app-user-list>
+  <app-sign-in></app-sign-in>
+  <button (click)="getName('amit')">click me </button>
 
-  <app-course-card></app-course-card>
+  <br /><br />
+  <input type="text" #box1 placeholder="keyup" (keyup)="getData(box1.value)"/>
+  <br /><br />
+  <input type="text" #box2 placeholder="keydown" (keydown)="getData(box2.value)"/>
+  <br /><br />
+  <input type="text" #box3 placeholder="blur" (blur)="getData(box3.value)"/>
+  <br /><br />
+  <input type="text" #box4 placeholder="input" (input)="getData(box4.value)"/>
+  <br /><br />
+  <h1 (mouseover)="getData('send from mouseover')">Code by Amit</h1>
+  <br /><br />
+  <h1 (mouseleave)="getData('send from mouseleave')">Code by amit kumar</h1>
 </div>
 
 
