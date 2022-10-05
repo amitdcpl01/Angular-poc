@@ -164,12 +164,22 @@
   </li>
 </ul> -->
 
-<ul>
+<!-- <ul>
   <li *ngFor="let user of users">
     {{user.name}}
   </li>
 </ul>
-<app-footer></app-footer>
+<app-footer></app-footer> -->
+
+<form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+  <input type="text" ngModel name="name" placeholder="name">
+  <br /><br />
+  <input type="password" ngModel name="password" placeholder="password">
+  <br /><br />
+  <input type="email" ngModel name="email" placeholder="email">
+  <br /><br />
+  <button>submit</button>
+</form>
 </div>
 
 <!-- <router-outlet></router-outlet> -->

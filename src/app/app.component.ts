@@ -20,13 +20,20 @@ export class AppComponent {
     })
   }
 
+  getUserFormData(data: any){
+    console.warn(data);
+    this.usersData.saveUser(data).subscribe((res: any)=>{
+      console.warn(res);
+    })
+  }
+
   // constructor(private usersData:UserdataService){
   //   this.usersData.users().subscribe((data: any)=>{
   //     // console.warn('data', data);
   //     this.users = data;
   //   });
   // }
-
+  
 loginForm = new FormGroup({
   user: new FormControl('', [Validators.required]),
   password: new FormControl(''),
