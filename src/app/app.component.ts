@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
+import {UserdataService} from './services/userdata.service'
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,12 @@ import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Angular-POC';
+
+  users:any;
+  constructor(private usersData:UserdataService){
+    console.warn(usersData.users());
+    this.users = usersData.users();
+  }
 
 loginForm = new FormGroup({
   user: new FormControl('', [Validators.required]),
@@ -28,7 +35,7 @@ get user(){
     { name:'sony', email:'anil@text.com', phone:'1111'},
     { name:'lucy', email:'anil@text.com', phone:'1111'}
   ];
-  users= [
+  users2= [
     { name:'Anil', email:'anil@text.com', phone:'1111', accounts: ['yahoo', 'facebook']},
     { name:'sumit', email:'anil@text.com', phone:'1111', accounts: ['yahoo', 'facebook']},
     { name:'sony', email:'anil@text.com', phone:'1111', accounts: ['yahoo', 'facebook']},
@@ -93,4 +100,11 @@ get user(){
 
     console.warn(val);
   }
+
+  memberData= [
+    { name:'Anil', email:'anil@text.com', phone:'1111'},
+    { name:'sumit', email:'anil@text.com', phone:'1111'},
+    { name:'sony', email:'anil@text.com', phone:'1111'},
+    { name:'lucy', email:'anil@text.com', phone:'1111'}
+  ];
 }

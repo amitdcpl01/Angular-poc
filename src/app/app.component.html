@@ -146,7 +146,7 @@
   <button>Submit</button>
 </form> -->
  <!-- <h1 appRedEl >{{title}}</h1> -->
-<a routerLink="">Home</a>
+<!-- <a routerLink="">Home</a>
 <br /><br />
 <a routerLink="about">About</a>
 <br /><br />
@@ -156,9 +156,20 @@
 <a routerLink="about/20">Contact</a>
 <br /><br />
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
 
+<!-- <ul>
+  <li *ngFor="let data of memberData">
+    {{data.name}}
+  </li>
+</ul> -->
+
+<ul>
+  <li *ngFor="let user of users">
+    {{user.name}}
+  </li>
+</ul>
+<app-footer></app-footer>
 </div>
-
 
 <!-- <router-outlet></router-outlet> -->
