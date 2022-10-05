@@ -171,7 +171,7 @@
 </ul>
 <app-footer></app-footer> -->
 
-<form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+<!-- <form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
   <input type="text" ngModel name="name" placeholder="name">
   <br /><br />
   <input type="password" ngModel name="password" placeholder="password">
@@ -179,7 +179,14 @@
   <input type="email" ngModel name="email" placeholder="email">
   <br /><br />
   <button>submit</button>
-</form>
+</form> -->
+
+<h2>Admin link</h2>
+<ul>
+  <li><a routerLink="admin/login">Login</a></li>
+  <li><a routerLink="admin/list">List</a></li>
+</ul>
+
 </div>
 
-<!-- <router-outlet></router-outlet> -->
+<router-outlet></router-outlet>

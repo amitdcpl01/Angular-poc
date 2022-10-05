@@ -2,14 +2,21 @@ import { Component } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import {UserdataService} from './services/userdata.service'
 
+interface dataType {
+  name:string,
+  id:number,
+  indian:boolean;
+ }
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent {
   title = 'Angular-POC';
-
   users:any;
   // myusers: any;
   constructor(private usersData:UserdataService){
@@ -18,6 +25,14 @@ export class AppComponent {
     this.usersData.user2().subscribe((data: any)=>{
       this.users = data;
     })
+  }
+
+  getMyData(){
+    const data:dataType={
+      name:'amit',
+      id:10,
+      indian: true
+    }
   }
 
   getUserFormData(data: any){
@@ -47,6 +62,8 @@ get user(){
   show= true;
   color = "green";
   users1= ['amit', 'sumit', 'sony', 'lucy', 'sam'];
+
+
   userDetails= [
     { name:'Anil', email:'anil@text.com', phone:'1111'},
     { name:'sumit', email:'anil@text.com', phone:'1111'},
