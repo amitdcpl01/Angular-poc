@@ -105,9 +105,39 @@
 <button (click)="updateData()">Update child</button> -->
 
 
-<ul *ngFor="let user of userDetails">
+<!-- <ul *ngFor="let user of userDetails">
   <app-user-list [item]="user"></app-user-list>
-</ul>
+</ul> -->
+<!-- <h2>{{childdata}}</h2>
+<app-child (updateDataEvent)="updateDataFromChild($event)"></app-child> -->
+
+<!-- <input type="text" [(ngModel)]="data">
+<h3>{{data}}</h3> -->
+
+<!-- <input type="text" #box>
+<button (click)="getVal(box.value)">click me</button> -->
+
+<!-- <h2>{{title | uppercase}}</h2>
+<h2>{{title | lowercase}}</h2>
+<h2>{{title}}</h2>
+<h2>{{title | slice :3:8}}</h2>
+<h1>{{users | json | uppercase}}</h1>
+<h2>{{000.3400 | number: '1.2-3'}}</h2>
+<h2>{{100 | currency: 'INR'}}</h2> -->
+<br /><br />
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+  <input type="email" required #name="ngModel"  name="name" placeholder="Enter username" ngModel>
+  <br />
+  <span *ngIf="name.invalid && name.touched" style="color: red">Please Enter valid input</span>
+  <br />
+  <input type="password" name="password" required #password="ngModel" minlength="3" placeholder="Enter password" ngModel>
+  <br />
+  <span *ngIf="password.invalid && password.touched" style="color: red">Please Enter valid input</span><br />
+  <button [disabled]="loginForm.invalid">Login</button>
+</form>
+
+
+
 </div>
 
 

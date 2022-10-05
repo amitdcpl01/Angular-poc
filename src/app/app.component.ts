@@ -7,7 +7,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-poc';
+  title = 'Angular-POC';
   displayVal: string = '';
   show= true;
   color = "green";
@@ -29,7 +29,7 @@ export class AppComponent {
     alert('Hello world');
   }
 
-  getVal(val: string){
+  getVal1(val: string){
     console.log(val);
     this.displayVal = val;
   }
@@ -61,8 +61,26 @@ export class AppComponent {
     console.log(id);
     this.list = this.list.filter(item => item.id !== id);
   }
-  data= 8;
+  // data= 8;
   updateData(){
     this.data = Math.random();
+  }
+
+  childdata='x';
+  updateDataFromChild(item:string){
+    console.warn(item);
+    this.childdata= item;
+  }
+
+  data:any;
+
+  getVal(val: string){
+    console.warn(val);
+    this.displayVal = val;
+  }
+
+  loginUser(val: any){
+
+    console.warn(val);
   }
 }

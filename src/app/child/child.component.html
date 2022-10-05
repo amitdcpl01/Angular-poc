@@ -1,4 +1,7 @@
 <p>child works!</p>
 
-<h2>{{item}}</h2>
-<h2>{{item2}}</h2>
+<!-- <h2>{{item}}</h2>
+<h2>{{item2}}</h2> -->
+
+<input type="text" #box>
+<button (click)="updateDataEvent.emit(box.value)">update data</button>
