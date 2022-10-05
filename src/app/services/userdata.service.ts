@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserdataService {
+  
+  // url = 'https://jsonplaceholder.typicode.com/users';
+  // constructor(private http: HttpClient) {
+  //   users(){
+  //     return this.http.get(this.url);
+  //   }
 
-  constructor() { }
+  // }
 
   users(){
     return[
@@ -16,3 +23,7 @@ export class UserdataService {
     ]
   }
 }
+// function myusers() {
+//   throw new Error('Function not implemented.');
+// }
+

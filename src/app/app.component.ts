@@ -11,10 +11,18 @@ export class AppComponent {
   title = 'Angular-POC';
 
   users:any;
+  // myusers: any;
   constructor(private usersData:UserdataService){
     console.warn(usersData.users());
     this.users = usersData.users();
   }
+
+  // constructor(private usersData:UserdataService){
+  //   this.usersData.users().subscribe((data: any)=>{
+  //     // console.warn('data', data);
+  //     this.users = data;
+  //   });
+  // }
 
 loginForm = new FormGroup({
   user: new FormControl('', [Validators.required]),
