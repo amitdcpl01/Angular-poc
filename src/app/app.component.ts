@@ -13,8 +13,11 @@ export class AppComponent {
   users:any;
   // myusers: any;
   constructor(private usersData:UserdataService){
-    console.warn(usersData.users());
-    this.users = usersData.users();
+    // console.warn(usersData.users());
+    // this.users = usersData.users();
+    this.usersData.user2().subscribe((data: any)=>{
+      this.users = data;
+    })
   }
 
   // constructor(private usersData:UserdataService){
