@@ -93,8 +93,16 @@
   <li>{{userData.user}}</li>
   <li>{{userData.email}}</li>
 </ul> -->
+<!-- <input type="text" placeholder="Enter New Task" #task>
+<br /><br />
+<button (click)="addTask(task.value)">Add New Task</button>
+<br /><br />
+<ul *ngFor="let item of list">
+  <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
+</ul> -->
 
-
+<app-child [item]="data" [item2]="data"></app-child>
+<button (click)="updateData()">Update child</button>
 </div>
 
 

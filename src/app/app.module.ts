@@ -12,6 +12,7 @@ import { CountryComponent } from './country/country.component';
 import {UserAuthModule } from './user-auth/user-auth.module';
 import { FormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RegisterComponent,
     UserListComponent,
     HeaderComponent,
-    CountryComponent
+    CountryComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

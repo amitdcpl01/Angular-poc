@@ -52,4 +52,18 @@ export class AppComponent {
     console.warn(data)
     this.userData= data;
   }
+
+  list:any[]=[];
+  addTask(item:string){
+    this.list.push({id:this.list.length, name: item});
+    console.warn(this.list);
+  }
+  removeTask(id:number){
+    console.log(id);
+    this.list = this.list.filter(item => item.id !== id);
+  }
+  data= 8;
+  updateData(){
+    this.data = Math.random();
+  }
 }
